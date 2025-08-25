@@ -23,6 +23,9 @@ m2i-prepa-formation/
     ├── J3/ # Classe CompteBancaire
     ├── J4/ # Classe Client avec liste de comptes
     └── J5/ # Héritage : CompteEpargne
+└── S2/ # Semaine 2 - Exceptions et Collections
+    ├── J6/ # Exceptions personnalisées
+    └── J7/ # Collections (List, Set, Map)
 ```
 
 ## ▶️ Exécution
@@ -30,13 +33,13 @@ m2i-prepa-formation/
 Chaque jour contient des fichiers `.java`.
 Pour exécuter un programme :
 
-1. Compiler le fichier :
+1. Compiler le fichier (depuis la racine du projet si vous utilisez des packages) :
 ```bash
-javac Main.java
+javac S2\J7\CollectionsDemo.java S2\J7\BanqueCollections.java S2\J7\CompteBancaire.java S2\J7\SoldeInsuffisantException.java S2\J7\CompteEpargne.java
 ```
-2. Lancer le programme :
+2. Lancer le programme (en spécifiant le nom complet de la classe avec son package) :
 ```bash
-java Main
+java S2.J7.CollectionsDemo
 ```
 ⚠️ Assurez-vous d’avoir installé Java JDK 21 (ou une version compatible).
 
