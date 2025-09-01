@@ -1,0 +1,35 @@
+# Fichiers générés par les IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Fichiers de compilation
+*.class
+*.jar
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Dossiers de build
+target/
+build/
+bin/
+
+# Fichiers Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Fichiers de dépendances
+dependency-reduced-pom.xml
+
+# Fichiers de logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp

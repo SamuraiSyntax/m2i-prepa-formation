@@ -25,7 +25,12 @@ m2i-prepa-formation/
     └── J5/ # Héritage : CompteEpargne
 └── S2/ # Semaine 2 - Exceptions et Collections
     ├── J6/ # Exceptions personnalisées
-    └── J7/ # Collections (List, Set, Map)
+    ├── J7/ # Collections (List, Set, Map)
+    ├── J8/ # Bases de Données SQL et PostgreSQL
+    ├── J9/ # Connexion JDBC et Classe EtudiantDAO
+    └── J10/ # Application Console GestionEtudiants
+└── S3/ # Semaine 3 - API REST avec Spring Boot
+    └── gestion-etudiants-api/ # Projet Spring Boot de gestion des étudiants
 ```
 
 ## ▶️ Exécution
@@ -43,11 +48,19 @@ java S2.J7.CollectionsDemo
 ```
 ⚠️ Assurez-vous d’avoir installé Java JDK 21 (ou une version compatible).
 
+Pour les projets Spring Boot (S3 et futurs), utilisez Maven pour construire et exécuter :
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
 ## 🛠️ Technologies utilisées
-- Java 21 (POO, JDBC, héritage)
+- Java 21 (POO, JDBC, héritage, Collections, Exceptions)
 - Git & GitHub (versionning du projet)
 - VS Code / Cursor comme IDE
-- (À venir) Spring Boot & Angular
+- Spring Boot (API REST, JPA, Security, Swagger)
+- PostgreSQL (Base de données)
+- (À venir) Angular
 
 ## ✨ Auteur
 👤 Bernard Rogier
