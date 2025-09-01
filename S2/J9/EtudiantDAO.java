@@ -53,19 +53,32 @@ public class EtudiantDAO {
     }
 
     public void addEtudiant(Etudiant etudiant) {
-        String sql = "INSERT INTO etudiants (nom, prenom, email) VALUES (?, ?, ?)";
-
+        String sql = "INSERT INTO etudiants(nom, prenom, email) VALUES(?, ?, ?)";
         try (Connection conn = getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
             pstmt.setString(1, etudiant.getNom());
             pstmt.setString(2, etudiant.getPrenom());
             pstmt.setString(3, etudiant.getEmail());
             pstmt.executeUpdate();
-            System.out.println("Etudiant " + etudiant.getNom() + " " + etudiant.getPrenom() + " ajouté avec succès.");
+            System.out.println("Étudiant " + etudiant.getNom() + " " + etudiant.getPrenom() + " ajouté avec succès.");
         } catch (SQLException e) {
-            System.err.println("Erreur lors de l'ajout de l'étudiant: " + e.getMessage());
-            e.printStackTrace();
+            System.err.println("Erreur lors de l'ajout de l'étudiant : " + e.getMessage());
+        }
+    }
+
+    public void deleteEtudiant(int id) {
+        String sql = "DELETE FROM etudiants WHERE id = ?";
+        try (Connection conn = getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                System.out.println("Étudiant avec l'ID " + id + " supprimé avec succès.");
+            } else {
+                System.out.println("Aucun étudiant trouvé avec l'ID " + id + ".");
+            }
+        } catch (SQLException e) {
+            System.err.println("Erreur lors de la suppression de l'étudiant : " + e.getMessage());
         }
     }
 }
